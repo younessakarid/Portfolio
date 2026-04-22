@@ -41,13 +41,13 @@ function useWindowSize() {
 
 const MOI = {
   nom: "AKARID Youness",
-  titres: ["Développeur Full Stack", "Développeur React", "Développeur Web"],
+  titres: ["Développeur Full Stack", "Développeur Web"],
   accroche:
-    "Créer des interfaces web modernes et performantes avec React, Node.js et les meilleures pratiques du développement.",
-  bio: `Je suis un développeur Full Stack passionné par la création d'applications web interactives et responsives.
+    "Spécialisé dans la création d’applications web modernes, performantes et accessibles, en respectant les meilleures pratiques du développement.",
+  bio: `développeur Full Stack passionné par la création d'applications web interactives et responsives.
 Actuellement en formation de Bachelor Concepteur Développeur Web Full Stack, j'ai acquis une expérience solide en
-développement Front-End avec React et Vue.js, ainsi qu'en Back-End avec Node.js et Express.
-Je suis à la recherche d'une alternance pour mon Master Expert Architecte Web (2026-2028)
+développement Front-End avec React , ainsi qu'en Back-End avec Node.js et Express.
+à la recherche d'une alternance pour mon Master Expert Architecte Web (2026-2028)
 avec un rythme de 3 semaines en entreprise / 1 semaine en formation.`,
   localisation: "Paris, France",
   disponible: true,
@@ -61,22 +61,22 @@ const COMPETENCES = [
     categorie: "Langages",
     icone: "⌨",
     items: [
-      { nom: "JavaScript", niveau: 92 },
-      { nom: "Python", niveau: 85 },
-      { nom: "Java", niveau: 80 },
+      { nom: "JavaScript", niveau: 88 },
+      { nom: "Python", niveau: 69 },
+      { nom: "Java", niveau: 70 },
       { nom: "SQL", niveau: 88 },
-      { nom: "PHP", niveau: 75 },
+      { nom: "PHP", niveau: 70 },
     ],
   },
   {
     categorie: "Front-End",
     icone: "◈",
     items: [
-      { nom: "React.js", niveau: 93 },
-      { nom: "Vue.js", niveau: 85 },
+      { nom: "React.js", niveau: 91 },
+      { nom: "Vue.js", niveau: 75 },
       { nom: "Tailwind CSS", niveau: 90 },
-      { nom: "Next.js", niveau: 88 },
-      { nom: "Angular", niveau: 78 },
+      { nom: "Next.js", niveau: 82 },
+      { nom: "Angular", niveau: 65 },
     ],
   },
   {
@@ -87,6 +87,15 @@ const COMPETENCES = [
       { nom: "MongoDB", niveau: 85 },
       { nom: "PostgreSQL / MySQL", niveau: 88 },
       { nom: "API REST", niveau: 90 },
+    ],
+  },
+  {
+    categorie: "base de données",
+    icone: "⬡",
+    items: [
+      { nom: "MongoDB", niveau: 85 },
+      { nom: "MySQL", niveau: 88 },
+      { nom: "PostgreSQL", niveau: 70 },
     ],
   },
   {
@@ -140,19 +149,34 @@ const EXPERIENCES = [
     tags: ["React.js", "Tailwind CSS", "JavaScript ES6+", "Git", "Agile"],
   },
   {
-    entreprise: "Institut Européen F2I-DSP",
-    poste: "Étudiant — Master Expert Architecte Web",
-    periode: "2026 — 2028",
-    desc: "Formation avancée en architecture web et développement Full Stack. Apprentissage des bonnes pratiques d'architecture logicielle, des patrons de conception et des technologies modernes. Alternance : 3 semaines en entreprise / 1 semaine en formation.",
-    tags: ["Architecture Web", "Full Stack", "Design Patterns", "Masterclass"],
-  },
-  {
-    entreprise: "Institut Européen F2I-DSP",
-    poste: "Étudiant — Bachelor Concepteur Développeur Web Full Stack (en cours)",
-    periode: "2025 — 2026",
-    desc: "Formation complète en développement web Full Stack. Maîtrise des technologies Front-End (React, Vue, Angular) et Back-End (Node.js, Express, Laravel). Projets pratiques et apprentissage des méthodologies Agile.",
-    tags: ["React", "Node.js", "SQL", "Développement Web"],
-  },
+  entreprise: "Institut Européen F2I-DSP",
+  poste: "Étudiant — Bachelor Concepteur Développeur Web Full Stack (en cours)",
+  periode: "2025 — 2027",
+  desc: "Formation complète couvrant l’analyse, la conception et le développement de solutions digitales. Acquisition de compétences en gestion de projet (méthodologies Agile), administration systèmes et réseaux, cloud (AWS), ainsi qu’en stratégie digitale (SEO, UX/UI). Développement d’applications web et mobiles avec des technologies modernes, modélisation de bases de données (Merise, UML) et programmation algorithmique.",
+  tags: [
+    "Algorithmique",
+    "Gestion de Projet",
+    "AWS",
+    "UX/UI Design",
+    "SEO",
+    "HTML/CSS",
+    "JavaScript",
+    "Angular",
+    "Node.js",
+    "Symfony",
+    "PHP",
+    "UML",
+    "Merise",
+    "GitHub"
+  ],
+},
+   {
+  entreprise: "École Française d'Enseignement Technique",
+  poste: "Développeur Informatique — Bac +2",
+  periode: "2023 — 2025",
+  desc: "Formation approfondie en développement web et en algorithmique. Acquisition des bonnes pratiques de conception (design patterns), résolution de problèmes complexes et développement d’applications frontend et backend avec des technologies modernes. Formation en alternance : 3 semaines en entreprise et 1 semaine en centre de formation.",
+  tags: ["Algorithmique", "Structures de Données", "Frontend", "Backend", "Full Stack", "Architecture Logicielle", "Design Patterns"]
+},
 ];
 
 // ─────────────────────────────────────────────
@@ -643,6 +667,16 @@ function Hero() {
   const { width } = useWindowSize();
   const mobile = width <= 768;
 
+  const handleDownloadCV = () => {
+    const cvPath = new URL("./assets/cv-youness-akarid-alternance.pdf", import.meta.url).href;
+    const link = document.createElement("a");
+    link.href = cvPath;
+    link.download = "cv-youness-akarid-alternance.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="accueil"
@@ -777,7 +811,7 @@ function Hero() {
             Voir mes projets →
           </button>
           <button
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={handleDownloadCV}
             data-survol
             style={{
               background: "transparent", color: "var(--texte)",
@@ -799,7 +833,7 @@ function Hero() {
               e.currentTarget.style.color = "var(--texte)";
             }}
           >
-            Me contacter
+            Télécharger CV
           </button>
         </div>
 
@@ -893,10 +927,10 @@ function APropos() {
             fontWeight: 800, color: "var(--blanc)",
             lineHeight: 1.1, marginBottom: 28,
           }}>
-            Créer des interfaces{" "}
-            <span style={{ color: "var(--vert)" }}>modernes</span>{" "}
-            et des systèmes{" "}
-            <span style={{ color: "var(--cyan)" }}>performants</span>.
+           Je transforme des{" "}
+<span style={{ color: "var(--vert)" }}>idées</span>{" "}
+en expériences web{" "}
+<span style={{ color: "var(--cyan)" }}>modernes et performantes</span>.
           </h2>
 
           {MOI.bio
