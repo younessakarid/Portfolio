@@ -62,26 +62,28 @@ const COMPETENCES = [
     icone: "⌨",
     items: [
       { nom: "JavaScript", niveau: 88 },
+      { nom: "TypeScript", niveau: 60 },
       { nom: "Python", niveau: 69 },
       { nom: "Java", niveau: 70 },
       { nom: "SQL", niveau: 88 },
-      { nom: "PHP", niveau: 70 },
+      { nom: "PHP", niveau: 75 },
+      { nom: "C++", niveau: 50 },
     ],
   },
   {
     categorie: "Front-End",
     icone: "◈",
     items: [
-      { nom: "React.js", niveau: 91 },
-      { nom: "Vue.js", niveau: 75 },
+      { nom: "HTML5", niveau: 90 },
+      { nom: "CSS3", niveau: 90 },
+      { nom: "React.js", niveau: 88 },
       { nom: "Tailwind CSS", niveau: 90 },
-      { nom: "Next.js", niveau: 82 },
-      { nom: "Angular", niveau: 65 },
+      { nom: "Next.js", niveau: 80 },
     ],
   },
   {
     categorie: "Back-End",
-    icone: "⬡",
+    icone: "⚙",
     items: [
       { nom: "Node.js / Express", niveau: 89 },
       { nom: "MongoDB", niveau: 85 },
@@ -90,8 +92,8 @@ const COMPETENCES = [
     ],
   },
   {
-    categorie: "base de données",
-    icone: "⬡",
+    categorie: "Base de données",
+    icone: "🗄",
     items: [
       { nom: "MongoDB", niveau: 85 },
       { nom: "MySQL", niveau: 88 },
@@ -99,15 +101,27 @@ const COMPETENCES = [
     ],
   },
   {
-    categorie: "Outils & Design",
-    icone: "🎨",
+    categorie: "Outils & DevOps",
+    icone: "🛠️",
     items: [
-      { nom: "Git / GitHub", niveau: 91 },
-      { nom: "Docker", niveau: 80 },
-      { nom: "Figma (UX/UI)", niveau: 82 },
-      { nom: "Agile (Scrum)", niveau: 87 },
+      { nom: "Git / GitHub / GitLab", niveau: 90 },
+      { nom: "Docker", niveau: 65 },
+      { nom: "Kubernetes", niveau: 65 },
+      { nom: "Linux", niveau: 62 },
+      { nom: "Postman", niveau: 66 },
+      { nom: "Figma (UX/UI)", niveau: 80 },
+      { nom: "Agile (Scrum)", niveau: 86 },
     ],
   },
+  {
+    categorie: "CMS & No-Code",
+    icone: "🧩",
+    items: [
+      { nom: "WordPress", niveau: 74 },
+      { nom: "Webflow", niveau: 67 },
+      { nom: "Shopify", niveau: 90 },
+    ],
+  }
 ];
 
 const PROJETS = [
