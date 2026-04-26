@@ -133,7 +133,7 @@ const PROJETS = [
     lien: "#",
     point_fort: "Full Stack",
     type: "Projet Final (PFE)",
-    image: "/src/assets/dental7paris.png",
+    image: "/src/assets/dentalparis.png",
   },
   {
     id: "02",
