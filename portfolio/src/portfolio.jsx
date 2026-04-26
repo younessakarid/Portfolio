@@ -77,6 +77,7 @@ const COMPETENCES = [
       { nom: "HTML5", niveau: 90 },
       { nom: "CSS3", niveau: 90 },
       { nom: "React.js", niveau: 88 },
+      { nom: "Redux", niveau: 77 },
       { nom: "Tailwind CSS", niveau: 90 },
       { nom: "Next.js", niveau: 80 },
     ],
@@ -106,7 +107,6 @@ const COMPETENCES = [
     items: [
       { nom: "Git / GitHub / GitLab", niveau: 90 },
       { nom: "Docker", niveau: 65 },
-      { nom: "Kubernetes", niveau: 65 },
       { nom: "Linux", niveau: 62 },
       { nom: "Postman", niveau: 66 },
       { nom: "Figma (UX/UI)", niveau: 80 },
@@ -157,7 +157,7 @@ const PROJETS = [
 const EXPERIENCES = [
   {
     entreprise: "AGRIDATA CONSULTING",
-    poste: "Développeur Front-End (Alternance)",
+    poste: "Développeur Front-End (Stage alterné)",
     periode: "Mai 2024 — Août 2025",
     desc: "Développement d'interfaces web interactives et responsives avec React.js. Création d'interfaces utilisateur modernes garantissant une navigation fluide. Utilisation de Git pour la gestion des versions et la collaboration en équipe. Respect des bonnes pratiques : code propre, composants réutilisables, design réactif et sécurité côté client. Travail en équipe selon la méthode Agile.",
     tags: ["React.js", "Tailwind CSS", "JavaScript ES6+", "Git", "Agile"],
@@ -1025,12 +1025,12 @@ en expériences web{" "}
               ['  "localisation":', `"${MOI.localisation}"`],
               ['  "disponible":', "true"],
               ['  "spécialités":', "["],
-              ['    "React & Vue.js",', ""],
-              ['    "Node.js & Express",', ""],
-              ['    "Architecture Web"', ""],
+              ['    "Développement Full Stack",', ""],
+              ['    "Développement Web",', ""],
+              ['    "Développement Front-End"', ""],
               ["  ],", ""],
               ['  "formation":', '"Bachelor Concepteur Développeur Web Full Stack (en cours)"'],
-              ['  "centres_intérêt":', '["Open Source", "Design Web", "Innovation"]'],
+              ['  "centres_intérêt":', '["Sports", "Gaming", "Veille Technologique"]'],
               ["}", ""],
             ].map(([clé, val], i) => (
               <div key={i}>
